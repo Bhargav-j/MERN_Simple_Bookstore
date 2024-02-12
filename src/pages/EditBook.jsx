@@ -47,7 +47,7 @@ const EditBook = () => {
     };
     setLoading(true);
     try {
-      const response = await axios.put(`http://localhost:5000/books/${id}`, data);
+      const response = await axios.put(`https://simple-bookstore-backend.onrender.com/books/${id}`, data);
       setLoading(false);
       enqueueSnackbar('Book Edited successfully', {variant: 'success'})
       navigate("/");
